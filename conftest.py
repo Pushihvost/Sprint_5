@@ -3,9 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from utils.urls import BASE_URL
 
-
-
-
 @pytest.fixture
 def driver():
     service = Service("C:\\WebDriver\\bin\\chromedriver.exe")
@@ -13,12 +10,6 @@ def driver():
     driver.maximize_window()
     driver.get(BASE_URL)
 
-
     yield driver
 
     driver.quit()
-
-
-
-
-
